@@ -1,10 +1,19 @@
 import './App.css';
+import { Button } from '@mui/material';
+import { Routes, Route } from 'react-router-dom'
+import TestHomePage from './TestPages/TestHomePage';
+import TestDetailPage from './TestPages/TestDetailPage';
+import TestAppLayout from './TestAppLayout/TestAppLayout';
 
 function App() {
   return (
-    <div className="App">
-      <p>feature브랜치 테스트 한번 해봤슴다!</p>
-      <p>feature브랜치 테스트 한번 해봤슴다!</p>
+    <div>
+      <Routes>
+        <Route path='/' element={<TestAppLayout />}>
+          <Route index element={<TestHomePage />} />
+          <Route path='/detail' element={<TestDetailPage />}></Route>
+        </Route>
+      </Routes>
     </div>
   );
 }

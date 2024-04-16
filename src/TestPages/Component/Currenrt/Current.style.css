@@ -1,0 +1,6 @@
+.contentItem {
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 40%;
+    margin: 10px;
+}
